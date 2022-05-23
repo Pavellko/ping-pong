@@ -69,21 +69,22 @@ finish = False
 run = True 
 while run:
     for e in event.get():
-       if e.type == QUIT:
-           run = False
-       elif e.type == KEYDOWN:
-           if e.key == K_SPACE:
-               run=False
-       window.blit(background2,(0,0))
-       z = font.render("Игра PING-PONG", True, (255, 255, 255))
-       zz = z.get_rect(center = (280, 50))
-       window.blit(z, zz)
-       display.update()
-    time.delay(50)
+        if e.type == QUIT:
+            run = False
+            game = False
+        elif e.type == KEYDOWN:
+            if e.key == K_SPACE:
+                run=False
+        window.blit(background2,(0,0))
+        z = font.render("Игра PING-PONG", True, (255, 255, 255))
+        zz = z.get_rect(center = (280, 50))
+        window.blit(z, zz)
+        display.update()
+        time.delay(50)
 
 
 #############
-   
+
 while game:
     for e in event.get():
         if e.type == QUIT:
