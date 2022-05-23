@@ -62,6 +62,8 @@ speed_x = 3
 speed_y = 3
 
 
+###########  ЗАСТАВКА #############
+
 background2 = transform.scale(image.load('img.png'), (win_width, win_height))
 finish = False
 run = True 
@@ -79,6 +81,8 @@ while run:
        display.update()
     time.delay(50)
 
+
+#############
    
 while game:
     for e in event.get():
